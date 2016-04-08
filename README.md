@@ -6,8 +6,8 @@
 
 #### installing
 
-`npm install -g browserify`
+`npm install --save-dev browserify`
 
 #### usage
 
-`browserify main.js -o bundle.js`
+`./node_modules/.bin/browserify main.js -o bundle.js`
