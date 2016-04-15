@@ -33,3 +33,13 @@
 #### usage
 
 `./node_modules/.bin/browserify main.js -o bundle.js -t [babelify --presets [ es2015 ] ]`
+
+### webpack
+
+#### installing
+
+`npm install --save-dev webpack`
+
+#### usage
+
+`./node_modules/.bin/webpack main.js bundle_webpack.js`
