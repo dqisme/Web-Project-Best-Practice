@@ -17,11 +17,11 @@
 
 #### usage
 
-`./node_modules/.bin/browserify main.js -o bundle.js`
+`./node_modules/.bin/browserify ./src/main.js -o ./dist/bundle_browserified.js`
 
 #### output
 
-- bundle.js
+- `bundle_browserified.js`
 
 ### ES6 with babel
 
@@ -29,13 +29,17 @@
 
 `npm install --save-dev babel-cli babel-preset-es2015`
 
+#### dependencies
+
+- .babelrc
+
 #### usage
 
-`./node_modules/.bin/babel es6example.js -o es6example_babelified.js`
+`./node_modules/.bin/babel ./src/es6example.js -o ./dist/es6example_babeled.js`
 
 #### output
 
-- es6example_babelified.js_
+- `es6example_babeled.js`
 
 ### babelify
 
@@ -45,11 +49,11 @@
 
 #### usage
 
-`./node_modules/.bin/browserify main.js -o bundle.js -t [babelify --presets [ es2015 ] ]`
+`./node_modules/.bin/browserify ./src/main.js -o ./dist/bundle_babelified.js -t [babelify --presets [ es2015 ] ]`
 
 #### output
 
-- bundle.js
+- `bundle_babelified.js`
 
 ### webpack
 
@@ -57,21 +61,17 @@
 
 `npm install --save-dev webpack`
 
-#### usage
-
-`./node_modules/.bin/webpack main.js bundle_webpack.js`
-
-#### output bundle_webpack.js
-
-### webpack with configuration
-
 #### dependencies
 
-- webpack.config.js
+- `webpack.config.js`
 
 #### usage
 
 `./node_modules/.bin/webpack`
+
+#### output
+
+- `bundle_webpacked.js`
 
 ### webpack plugin - html-webpack-plugin
 
@@ -81,7 +81,7 @@
 
 #### dependencies
 
-- webpack.config.js
+- `webpack.config.js`
 
 #### usage
 
@@ -89,4 +89,4 @@
 
 #### output
 
-- index.html
+- index_htmlwebpackplugin.html

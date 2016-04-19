@@ -1,9 +1,9 @@
 var HTMLWebpackPlugin = require('html-webpack-plugin');
 var webpackConfig = {
-    entry: "./main.js",
+    entry: "./src/main.js",
     output: {
-        path: __dirname,
-        filename: "bundle_webpack.js"
+        path: "./dist/",
+        filename: "bundle_webpacked.js"
     },
     module: {
     },
