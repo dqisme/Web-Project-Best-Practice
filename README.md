@@ -3,6 +3,9 @@
 - `browserify`
 - ES6 with `babel`
 - `babelify` (depends on `browserify` and `babel` preset)
+- `webpack`
+- `webpack` with configuration
+- `webpack` plugin - `html-webpack-plugin`
 
 ### browserify
 
@@ -14,6 +17,10 @@
 
 `./node_modules/.bin/browserify main.js -o bundle.js`
 
+#### output
+
+- bundle.js
+
 ### ES6 with babel
 
 #### babel installing
@@ -23,6 +30,10 @@
 #### usage
 
 `./node_modules/.bin/babel es6example.js -o es6example_babelified.js`
+
+#### output
+
+- es6example_babelified.js_
 
 ### babelify
 
@@ -34,6 +45,10 @@
 
 `./node_modules/.bin/browserify main.js -o bundle.js -t [babelify --presets [ es2015 ] ]`
 
+#### output
+
+- bundle.js
+
 ### webpack
 
 #### installing
@@ -43,6 +58,8 @@
 #### usage
 
 `./node_modules/.bin/webpack main.js bundle_webpack.js`
+
+#### output bundle_webpack.js
 
 ### webpack with configuration
 
@@ -59,7 +76,6 @@
 #### installing
 
 `npm install --save-dev html-webpack-plugin`
-
 
 #### dependencies
 
