@@ -93,7 +93,7 @@
 
 ### jshint
 
-#### Code Style
+#### code style
 
 - [Airbnb](https://github.com/airbnb/javascript)
 
@@ -108,3 +108,21 @@
 #### usage
 
 `./node_modules/.bin/jshint ./src/es6example.js`
+
+### eslint
+
+#### code style
+
+- [Airbnb](https://github.com/airbnb/javascript)
+
+#### installing
+
+`npm install --save-dev eslint eslint-config-airbnb babel-eslint eslint-plugin-react eslint-plugin-jsx-a11y`
+
+#### dependencies
+
+- `.eslintrc`
+
+#### usage
+
+`./node_modules/.bin/eslint ./src/es6example.js`
