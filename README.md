@@ -1,6 +1,6 @@
 # Web Project Best Practice
 
-[Relationship](https://www.mindomo.com/mindmap/5f2c938a5392487ab53cb3a8dcb1b8d3)
+[Relationship](http://www.nomnoml.com/#view/%2F%2F%20Entities%0A%5Bbabel%5D%0A%5Bbabelify%5D%0A%5Bbrowserify%5D%0A%5Bwebpack%5D%0A%5Bwebpack%20with%20configuration%5D%0A%5Bhtml-webpack-plugin%5D%0A%0A%2F%2F%20Relationship%0A%5Bbabelify%5D-%3E%5Bbabel%5D%0A%5Bbabelify%5D-%3E%5Bbrowserify%5D%0A%5Bhtml-webpack-plugin%5D-%3E%5Bwebpack%20with%20configuration%5D%0A%5Bwebpack%20with%20configuration%5D-%3E%5Bwebpack%5D)
 
 - `browserify`
 - ES6 with `babel`
