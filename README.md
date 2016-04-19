@@ -43,3 +43,13 @@
 #### usage
 
 `./node_modules/.bin/webpack main.js bundle_webpack.js`
+
+### webpack with configuration
+
+#### dependencies
+
+- webpack.config.js
+
+#### usage
+
+`./node_modules/.bin/webpack`
