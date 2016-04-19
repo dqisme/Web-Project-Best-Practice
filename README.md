@@ -53,3 +53,22 @@
 #### usage
 
 `./node_modules/.bin/webpack`
+
+### webpack plugin - html-webpack-plugin
+
+#### installing
+
+`npm install --save-dev html-webpack-plugin`
+
+
+#### dependencies
+
+- webpack.config.js
+
+#### usage
+
+`./node_modules/.bin/webpack`
+
+#### output
+
+- index.html
