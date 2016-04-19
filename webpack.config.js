@@ -1,4 +1,4 @@
-module.exports = {
+var webpackConfig = {
     entry: "./main.js",
     output: {
         path: __dirname,
@@ -7,3 +7,5 @@ module.exports = {
     module: {
     }
 };
+
+module.exports = webpackConfig;
