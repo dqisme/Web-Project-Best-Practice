@@ -1,6 +1,6 @@
 # Web Project Best Practice
 
-[Relationship](http://www.nomnoml.com/#view/%2F%2F%20Entities%0A%5Bbabel%5D%0A%5Bbabelify%5D%0A%5Bbrowserify%5D%0A%5Bwebpack%5D%0A%5Bwebpack%20with%20configuration%5D%0A%5Bhtml-webpack-plugin%5D%0A%0A%2F%2F%20Relationship%0A%5Bbabelify%5D-%3E%5Bbabel%5D%0A%5Bbabelify%5D-%3E%5Bbrowserify%5D%0A%5Bhtml-webpack-plugin%5D-%3E%5Bwebpack%20with%20configuration%5D%0A%5Bwebpack%20with%20configuration%5D-%3E%5Bwebpack%5D)
+[Relationship](http://www.nomnoml.com/#view/%2F%2F%20Entities%0A%5Bbabel%5D%0A%5Bbabelify%5D%0A%5Bbrowserify%5D%0A%5Bwebpack%5D%0A%5Bwebpack%20with%20configuration%5D%0A%5Bhtml-webpack-plugin%5D%0A%5Bjshint%5D%0A%0A%2F%2F%20Relationship%0A%5Bbabelify%5D-%3E%5Bbabel%5D%0A%5Bbabelify%5D-%3E%5Bbrowserify%5D%0A%5Bhtml-webpack-plugin%5D-%3E%5Bwebpack%20with%20configuration%5D%0A%5Bwebpack%20with%20configuration%5D-%3E%5Bwebpack%5D)
 
 - `browserify`
 - ES6 with `babel`
@@ -89,4 +89,22 @@
 
 #### output
 
-- index_htmlwebpackplugin.html
+- `index_htmlwebpackplugin.html`
+
+### jshint
+
+#### Code Style
+
+- [Airbnb](https://github.com/airbnb/javascript)
+
+#### installing
+
+`npm install --save-dev jshint`
+
+#### dependencies
+
+- `.jshintrc`
+
+#### usage
+
+`./node_modules/.bin/jshint ./src/es6example.js`
