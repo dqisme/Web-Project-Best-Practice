@@ -1,5 +1,7 @@
 # Web Project Best Practice
 
+[Relationship](https://www.mindomo.com/mindmap/5f2c938a5392487ab53cb3a8dcb1b8d3)
+
 - `browserify`
 - ES6 with `babel`
 - `babelify` (depends on `browserify` and `babel` preset)
