@@ -126,3 +126,13 @@
 #### usage
 
 `./node_modules/.bin/eslint ./src/es6example.js`
+
+### LESS
+
+#### installing
+
+`npm install --save-dev less`
+
+#### usage
+
+`./node_modules/.bin/lessc ./src/style.less ./dist/style.css`
