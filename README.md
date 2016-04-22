@@ -150,3 +150,22 @@
 #### usage
 
 `scss ./src/style.scss ./dist/style_scss.css --sourcemap=none`
+
+### scss-lint
+
+#### environment
+- ruby
+- gem
+- SCSS
+
+#### installing
+
+ `gem install scss_lint`
+
+#### dependencies
+
+- .scss-lint.yml
+
+#### usage
+
+`scss-lint ./src/style.scss`
