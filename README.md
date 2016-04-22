@@ -136,3 +136,17 @@
 #### usage
 
 `./node_modules/.bin/lessc ./src/style.less ./dist/style.css`
+
+### SCSS
+
+#### environment
+- ruby
+- gem
+
+#### installing
+
+`gem install scss`
+
+#### usage
+
+`scss ./src/style.scss ./dist/style_scss.css --sourcemap=none`
