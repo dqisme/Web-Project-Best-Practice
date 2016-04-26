@@ -13,6 +13,7 @@
 - `scss-lint`
 - `mocha`
 - `chai`
+- `mocha` with `babel`
 
 ### browserify
 
@@ -202,3 +203,12 @@
 var assert = require('chai').assert;
 ~~~
 
+### mocha with babel
+ 
+#### installing
+
+`npm install --save-dev babel-register`
+
+#### usage
+
+`./node_modules/.bin/mocha --compilers js:babel-register`
