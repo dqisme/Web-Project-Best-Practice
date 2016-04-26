@@ -8,6 +8,11 @@
 - `webpack`
 - `webpack` with configuration
 - `webpack` plugin - `html-webpack-plugin`
+- `jslint`
+- `eslint`
+- `LESS`
+- `SCSS`
+- `scss-lint`
 
 ### browserify
 
