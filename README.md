@@ -14,6 +14,7 @@
 - [chai](#chai)
 - [mocha with babel](#mocha-with-babel)
 - [istanbul@1.0.0-alpha.2](#istanbul100-alpha2)
+- [selenium-webdriver](#selenium-webdriver)
 
 ## browserify
 
@@ -303,3 +304,26 @@ npm install --save-dev istanbul@1.0.0-alpha.2
 ### output
 
 - `coverage/`
+
+## selenium-webdriver
+
+### requirements
+
+- [Selenium WebDriver](http://www.seleniumhq.org/projects/webdriver/)
+
+### installing
+
+```
+npm install --save selenium-webdriver
+```
+
+### dependencies
+
+- `functional-test.js`
+Actually, you need to separate functional test to another repository
+
+### usage
+
+```
+node functional-test.js
+```
