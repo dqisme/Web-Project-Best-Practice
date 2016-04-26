@@ -13,6 +13,8 @@
 - `LESS`
 - `SCSS`
 - `scss-lint`
+- `mocha`
+- `chai`
 
 ### browserify
 
@@ -174,3 +176,30 @@
 #### usage
 
 `scss-lint ./src/style.scss`
+
+### mocha
+
+#### installing
+
+`npm install --save-dev mocha`
+
+#### dependency
+
+- `./test`
+
+#### usage
+
+`mocha`
+
+### chai
+
+#### installing
+
+`npm install --save-dev chai`
+
+#### usage
+
+~~~ JavaScript
+var assert = require('chai').assert;
+~~~
+
