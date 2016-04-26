@@ -158,7 +158,7 @@ npm install --save-dev jshint
 ### installing
 
 ```
-npm install --save-dev eslint eslint-config-airbnb babel-eslint eslint-plugin-react eslint-plugin-jsx-a11y
+npm install --save-dev eslint-config-airbnb eslint-plugin-import eslint-plugin-react eslint-plugin-jsx-a11y eslint
 ```
 
 ### dependencies
