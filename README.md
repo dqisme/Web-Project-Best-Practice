@@ -1,229 +1,305 @@
 # Web Project Best Practice
 
-- `browserify`
-- ES6 with `babel`
-- `babelify` (depends on `browserify` and `babel` preset)
-- `webpack`
-- `webpack` with configuration
-- `webpack` plugin - `html-webpack-plugin`
-- `jslint`
-- `eslint`
-- `LESS`
-- `SCSS`
-- `scss-lint`
-- `mocha`
-- `chai`
-- `mocha` with `babel`
-- `istanbul@1.0.0-alpha.2`
+- [browserify](#browserify)
+- [ES6 with babel](#ES6-with-babel)
+- [babelify](#babelify)
+- [webpack](#webpack)
+- [html-webpack-plugin](#html-webpack-plugin)
+- [jshint](#jshint)
+- [eslint](#eslint)
+- [LESS](#less)
+- [SCSS](#scss)
+- [scss-lint](#scss-lint)
+- [mocha](#mocha)
+- [chai](#chai)
+- [mocha with babel](#mocha-with-babel)
+- [istanbul@1.0.0-alpha.2](#istanbul100-alpha2)
 
-### browserify
+## browserify
 
-#### installing
+### installing
 
-`npm install --save-dev browserify`
+```
+npm install --save-dev browserify`
+```
 
-#### usage
+### usage
 
-`./node_modules/.bin/browserify ./src/main.js -o ./dist/bundle_browserified.js`
+```
+./node_modules/.bin/browserify ./src/main.js -o ./dist/bundle_browserified.js
+```
 
-#### output
+### output
 
-- `bundle_browserified.js`
+- `dist/bundle_browserified.js`
 
-### ES6 with babel
+## ES6 with babel
 
-#### babel installing
+### babel installing
 
-`npm install --save-dev babel-cli babel-preset-es2015`
+```
+npm install --save-dev babel-cli babel-preset-es2015
+```
 
-#### dependencies
+### dependencies
 
-- .babelrc
+- `.babelrc`
 
-#### usage
+### usage
 
-`./node_modules/.bin/babel ./src/es6example.js -o ./dist/es6example_babeled.js`
+```
+./node_modules/.bin/babel ./src/es6example.js -o ./dist/es6example_babeled.js
+```
 
-#### output
+### output
 
-- `es6example_babeled.js`
+- `dist/es6example_babeled.js`
 
-### babelify
+## babelify
 
-#### installing
+### requirements
 
-`npm install --save-dev babelify`
+- [browserify](#browserify)
+- [ES6 with babel](#ES6-with-babel)
 
-#### usage
+### installing
 
-`./node_modules/.bin/browserify ./src/main.js -o ./dist/bundle_babelified.js -t [babelify --presets [ es2015 ] ]`
+```
+npm install --save-dev babelify
+```
 
-#### output
+### usage
 
-- `bundle_babelified.js`
+```
+./node_modules/.bin/browserify ./src/main.js -o ./dist/bundle_babelified.js -t [babelify --presets [ es2015 ] ]
+```
 
-### webpack
+### output
 
-#### installing
+- `dist/bundle_babelified.js`
 
-`npm install --save-dev webpack`
+## webpack
 
-#### dependencies
+### installing
+
+```
+npm install --save-dev webpack
+```
+
+### dependencies
 
 - `webpack.config.js`
 
-#### usage
+### usage
 
-`./node_modules/.bin/webpack`
+```
+./node_modules/.bin/webpack
+```
 
-#### output
+### output
 
-- `bundle_webpacked.js`
+- `dist/bundle_webpacked.js`
 
-### webpack plugin - html-webpack-plugin
+## html-webpack-plugin
 
-#### installing
+### requirements
 
-`npm install --save-dev html-webpack-plugin`
+- [webpack](#webpack)
 
-#### dependencies
+### installing
+
+```
+npm install --save-dev html-webpack-plugin
+```
+
+### dependencies
 
 - `webpack.config.js`
 
-#### usage
+### usage
 
-`./node_modules/.bin/webpack`
+```JavaScript
+var webpackConfig = {
+    output: {
+        path: "./dist/"
+    },
+    plugins: [new HTMLWebpackPlugin({
+        title: 'HTML Webpack Plugin',
+        filename: 'index_htmlwebpackplugin.html'
+    })]
+};
+```
 
-#### output
+### output
 
-- `index_htmlwebpackplugin.html`
+- `dist/index_htmlwebpackplugin.html`
 
-### jshint
+## jshint
 
-#### code style
+### installing
 
-- [Airbnb](https://github.com/airbnb/javascript)
+```
+npm install --save-dev jshint
+```
 
-#### installing
+### dependencies
 
-`npm install --save-dev jshint`
+- `.jshintrc` from [airbnb](https://github.com/airbnb/javascript/blob/master/linters%2F.jshintrc)
 
-#### dependencies
+### usage
 
-- `.jshintrc`
+```
+./node_modules/.bin/jshint ./src/es6example.js
+```
 
-#### usage
+## eslint
 
-`./node_modules/.bin/jshint ./src/es6example.js`
+### installing
 
-### eslint
+```
+npm install --save-dev eslint eslint-config-airbnb babel-eslint eslint-plugin-react eslint-plugin-jsx-a11y
+```
 
-#### code style
+### dependencies
 
-- [Airbnb](https://github.com/airbnb/javascript)
-
-#### installing
-
-`npm install --save-dev eslint eslint-config-airbnb babel-eslint eslint-plugin-react eslint-plugin-jsx-a11y`
-
-#### dependencies
-
-- `.eslintrc`
+- `.eslintrc` from [airbnb](https://github.com/airbnb/javascript/blob/master/linters%2F.eslintrc)
 - `.eslintignore`
 
 #### usage
 
-`./node_modules/.bin/eslint ./src/es6example.js`
+```
+./node_modules/.bin/eslint ./src/es6example.js
+```
 
-### LESS
+## LESS
 
-#### installing
+### installing
 
-`npm install --save-dev less`
+```
+npm install --save-dev less
+```
 
-#### usage
+### usage
 
-`./node_modules/.bin/lessc ./src/style.less ./dist/style.css`
+```
+./node_modules/.bin/lessc ./src/style.less ./dist/style.css
+```
 
-### SCSS
+### output
 
-#### environment
-- ruby
-- gem
+- `dist/style.css`
 
-#### installing
+## SCSS
 
-`gem install scss`
+### requirements
 
-#### usage
+- [ruby](https://www.ruby-lang.org/)
+- [gem](https://www.rubygems.org/)
 
-`scss ./src/style.scss ./dist/style_scss.css --sourcemap=none`
+### installing
 
-### scss-lint
+```
+gem install scss
+```
 
-#### environment
-- ruby
-- gem
-- SCSS
+### usage
 
-#### installing
+```
+scss ./src/style.scss ./dist/style_scss.css --sourcemap=none
+```
 
- `gem install scss_lint`
+### output
 
-#### dependencies
+- `dist/style_scss.css`
 
-- .scss-lint.yml
+## scss-lint
 
-#### usage
+### requirements
 
-`scss-lint ./src/style.scss`
+- [ruby](https://www.ruby-lang.org/)
+- [gem](https://www.rubygems.org/)
+- [SCSS](#scss)
 
-### mocha
+### installing
 
-#### installing
+```
+gem install scss_lint
+```
 
-`npm install --save-dev mocha`
+### dependencies
 
-#### dependency
+- `.scss-lint.yml`
+
+### usage
+
+```
+scss-lint ./src/style.scss
+```
+
+## mocha
+
+### installing
+
+```
+npm install --save-dev mocha
+```
+
+### dependency
 
 - `./test`
 
-#### usage
+### usage
 
-`./node_modules/.bin/mocha`
+```
+./node_modules/.bin/mocha
+```
 
-### chai
+## chai
 
-#### installing
+### installing
 
-`npm install --save-dev chai`
+```
+npm install --save-dev chai
+```
 
-#### usage
+### usage
 
-~~~ JavaScript
+```JavaScript
 var assert = require('chai').assert;
-~~~
+```
 
-### mocha with babel
+## mocha with babel
  
-#### installing
+### installing
 
-`npm install --save-dev babel-register`
+```
+npm install --save-dev babel-register
+```
 
-#### usage
+### usage
 
-`./node_modules/.bin/mocha --compilers js:babel-register`
+```
+./node_modules/.bin/mocha --compilers js:babel-register
+```
 
-### istanbul@1.0.0-alpha.2
+## istanbul@1.0.0-alpha.2
 
-#### installing
+### installing
 
-`npm install --save-dev istanbul@1.0.0-alpha.2`
+```
+npm install --save-dev istanbul@1.0.0-alpha.2
+```
 
-#### dependencies
+### dependencies
 
 - `.istanbul.yml`
 
-#### usage
+### usage
 
-` ./node_modules/.bin/istanbul cover ./node_modules/.bin/mocha -- --compilers js:babel-register && ./node_modules/.bin/istanbul check-coverage`
+```
+./node_modules/.bin/istanbul cover ./node_modules/.bin/mocha -- --compilers js:babel-register && ./node_modules/.bin/istanbul check-coverage
+```
+
+### output
+
+- `coverage/`
