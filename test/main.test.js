@@ -1,5 +1,5 @@
-import {describe, it} from "mocha";
-import {assert} from "chai";
+var assert = require('chai').assert;
+
 
 describe('Array', function () {
   describe('#indexOf()', function () {
