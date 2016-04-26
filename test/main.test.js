@@ -1,3 +1,4 @@
+var describe = require('mocha').describe;
 var assert = require('chai').assert;
 describe('Array', function() {
   describe('#indexOf()', function () {
