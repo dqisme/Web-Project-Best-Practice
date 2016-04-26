@@ -127,6 +127,7 @@
 #### dependencies
 
 - `.eslintrc`
+- `.eslintignore`
 
 #### usage
 
