@@ -189,7 +189,7 @@
 
 #### usage
 
-`mocha`
+`./node_modules/.bin/mocha`
 
 ### chai
 
