@@ -14,6 +14,7 @@
 - `mocha`
 - `chai`
 - `mocha` with `babel`
+- `istanbul`
 
 ### browserify
 
@@ -212,3 +213,17 @@ var assert = require('chai').assert;
 #### usage
 
 `./node_modules/.bin/mocha --compilers js:babel-register`
+
+### istanbul
+
+#### installing
+
+`npm install --save-dev istanbul`
+
+#### dependencies
+
+- `.istanbul.yml`
+
+#### usage
+
+` ./node_modules/.bin/istanbul cover ./node_modules/.bin/mocha -- --compilers js:babel-register`
