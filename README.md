@@ -298,7 +298,7 @@ npm install --save-dev istanbul@1.0.0-alpha.2
 ### usage
 
 ```
-./node_modules/.bin/istanbul cover ./node_modules/.bin/mocha -- --compilers js:babel-register && ./node_modules/.bin/istanbul check-coverage
+./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- --compilers js:babel-register && ./node_modules/.bin/istanbul check-coverage
 ```
 
 ### output
